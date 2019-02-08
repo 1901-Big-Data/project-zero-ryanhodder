@@ -1,5 +1,9 @@
 package com.revature.JDBCBank;
 
-public interface UserDao {
+import java.util.Optional;
 
+public interface UserDao {
+	
+	Optional<User> getUserByUsername(String Username);
+	
 }
