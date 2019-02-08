@@ -1,6 +1,10 @@
 package com.revature.JDBCBank;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
+
+import com.revature.Models.User;
+import com.revature.Services.UserService;
 
 public class App {
 	
@@ -9,8 +13,18 @@ public class App {
 	static String uName;
 	static String uPass;
 	static boolean isLoggedIn = false;
+	static String mm = new String("Would you like to\n\t1: Register\n\t2: Login\n\t3: Exit\n\t4: Help");
 	
 	public static void main(String[] args) {
+		
+		
+		//trigger in sql will create the USER_ID and ACCOUNT_ID
+		
+		//UserService.getService().addUser(username, password).get();
+		//-->get because Optional
+		//--> have to put in trycatch because throws exception or because it is an optional
+		//have to check for NoSuchElementException because it is an optional
+		//we dont rn but could do throws exception incase we want to check password is correct format or something
 		
 		//want to make sure to parse user input
 		//basically want to make sure of caps, so I can match words against theirs 
@@ -43,21 +57,23 @@ public class App {
 				if(uIn.equals("help") || uIn.equals("4")) {
 					help();	
 				}
+				if(uIn.equals("5")) {
+					User user = UserService.getService().login("u0", "p0").get();
+					System.out.println("Hola senor, " + user.getfName() + " mucho gusto");
+					break;
+				}
 			}
 			s.close();
+		}catch(NoSuchElementException e) {
+			System.out.println("Problem with database");
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}	
-		
-		//user dao
-		//implements calls that service will use
-		//UserOracle implements userdao
-		//UserService 
 	}
 	
 		public static void intro() {
 			System.out.println("Hello Sir or Madam\nWelcome to Bank of Revature\nHow are y'all today?\n");
-			System.out.println("Would you like to\n\t1: Register\n\t2: Login\n\t3: Exit\n\t4: Help");
+			System.out.println(mm);
 		}
 		
 		
@@ -77,6 +93,7 @@ public class App {
 			//Just creating a user here but would put into sql at this point
 			//User thisDude = new User(uFName, uLName, uName, uPass);
 			System.out.println("Alrighty boss you're all signed up\nLogin to continue\n");
+			System.out.println(mm);
 		}
 		
 		//might want to return type
