@@ -36,7 +36,6 @@ public class UserService {
 
 	
 	public Optional<User> addUser(String firstName, String lastName, String username, String password) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.addUser(firstName, lastName, username, password);
 	}
 }

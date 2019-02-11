@@ -80,3 +80,204 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
 	... 10 more
 [TRACE] 2019-02-08 18:11:08.145 [main] UserOracle - Exit with(Optional.empty)
+[TRACE] 2019-02-09 16:41:48.577 [main] UserOracle - Enter
+[ERROR] 2019-02-09 16:42:12.361 [main] ConnectionUtil - Catching
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_201]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_201]
+	at com.revature.Util.ConnectionUtil.getConnection(ConnectionUtil.java:44) [classes/:?]
+	at com.revature.Dao.UserOracle.login(UserOracle.java:39) [classes/:?]
+	at com.revature.Services.UserService.login(UserService.java:34) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:61) [classes/:?]
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 10 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_201]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 10 more
+[TRACE] 2019-02-09 16:42:12.396 [main] UserOracle - Exit with(Optional.empty)
+[TRACE] 2019-02-09 17:02:40.592 [main] UserOracle - Enter
+[ERROR] 2019-02-09 17:03:01.814 [main] ConnectionUtil - Catching
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_201]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_201]
+	at com.revature.Util.ConnectionUtil.getConnection(ConnectionUtil.java:44) [classes/:?]
+	at com.revature.Dao.UserOracle.login(UserOracle.java:39) [classes/:?]
+	at com.revature.Services.UserService.login(UserService.java:34) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:61) [classes/:?]
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 10 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_201]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 10 more
+[TRACE] 2019-02-09 17:03:01.830 [main] UserOracle - Exit with(Optional.empty)
+[TRACE] 2019-02-09 17:34:08.236 [main] UserOracle - Enter
+[ERROR] 2019-02-09 17:34:29.527 [main] ConnectionUtil - Catching
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_201]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_201]
+	at com.revature.Util.ConnectionUtil.getConnection(ConnectionUtil.java:44) [classes/:?]
+	at com.revature.Dao.UserOracle.login(UserOracle.java:39) [classes/:?]
+	at com.revature.Services.UserService.login(UserService.java:34) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:61) [classes/:?]
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 10 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_201]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 10 more
+[TRACE] 2019-02-09 17:34:29.552 [main] UserOracle - Exit with(Optional.empty)
+[TRACE] 2019-02-09 17:35:26.656 [main] UserOracle - Enter
+[ERROR] 2019-02-09 17:35:47.871 [main] ConnectionUtil - Catching
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_201]
+	at java.sql.DriverManager.getConnection(Unknown Source) ~[?:1.8.0_201]
+	at com.revature.Util.ConnectionUtil.getConnection(ConnectionUtil.java:43) [classes/:?]
+	at com.revature.Dao.UserOracle.login(UserOracle.java:39) [classes/:?]
+	at com.revature.Services.UserService.login(UserService.java:34) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:61) [classes/:?]
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 10 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Unknown Source) ~[?:1.8.0_201]
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	... 10 more
+[TRACE] 2019-02-09 17:35:47.894 [main] UserOracle - Exit with(Optional.empty)
+[TRACE] 2019-02-09 17:47:44.504 [main] UserOracle - Enter
+[ERROR] 2019-02-09 17:47:45.848 [main] UserOracle - ResultSet.next was not called
+[TRACE] 2019-02-09 17:54:24.353 [main] UserOracle - Enter
+[TRACE] 2019-02-09 18:10:55.879 [main] UserOracle - Enter
+[TRACE] 2019-02-09 18:34:38.759 [main] UserOracle - Enter
+[TRACE] 2019-02-10 11:36:48.121 [main] UserOracle - Enter
+[TRACE] 2019-02-10 11:37:39.747 [main] UserOracle - Enter
+[TRACE] 2019-02-10 11:37:50.220 [main] UserOracle - Enter
+[TRACE] 2019-02-10 11:51:29.770 [main] UserOracle - Enter
+[TRACE] 2019-02-10 11:51:30.626 [main] UserOracle - Enter
+[TRACE] 2019-02-10 11:51:38.997 [main] UserOracle - Enter
+[TRACE] 2019-02-10 11:51:39.034 [main] UserOracle - Enter
+[TRACE] 2019-02-10 11:59:11.776 [main] UserOracle - Enter
+[TRACE] 2019-02-10 11:59:30.223 [main] UserOracle - Enter
+[TRACE] 2019-02-10 12:47:49.486 [main] UserOracle - Enter
+[TRACE] 2019-02-10 12:49:56.095 [main] UserOracle - Enter
+[TRACE] 2019-02-10 12:52:34.333 [main] UserOracle - Enter
+[TRACE] 2019-02-10 12:53:33.500 [main] UserOracle - Enter
+[TRACE] 2019-02-10 12:53:57.029 [main] UserOracle - Enter
+[TRACE] 2019-02-10 12:57:16.455 [main] UserOracle - Enter
+[TRACE] 2019-02-10 17:31:21.767 [main] UserOracle - Enter
+[TRACE] 2019-02-10 18:50:00.437 [main] UserOracle - Enter
+[TRACE] 2019-02-10 18:50:17.626 [main] UserOracle - Enter
+[ERROR] 2019-02-10 18:50:17.717 [main] UserOracle - ORA-00001: unique constraint (ROOT.SYS_C005193) violated
+
+[TRACE] 2019-02-10 18:50:25.687 [main] UserOracle - Enter
+[TRACE] 2019-02-10 18:50:33.257 [main] UserOracle - Enter
+[TRACE] 2019-02-10 18:59:03.410 [main] UserOracle - Enter
+[TRACE] 2019-02-10 18:59:18.527 [main] UserOracle - Enter
+[TRACE] 2019-02-10 18:59:44.277 [main] UserOracle - Enter
+[TRACE] 2019-02-10 19:01:38.466 [main] UserOracle - Enter
+[TRACE] 2019-02-10 19:29:23.650 [main] UserOracle - Enter
+[TRACE] 2019-02-10 19:29:31.340 [main] UserOracle - Enter
+[TRACE] 2019-02-10 19:33:50.059 [main] UserOracle - Enter
+[TRACE] 2019-02-10 19:35:52.969 [main] UserOracle - Enter
+[TRACE] 2019-02-10 19:36:31.655 [main] UserOracle - Enter
+[TRACE] 2019-02-10 19:37:19.605 [main] UserOracle - Enter

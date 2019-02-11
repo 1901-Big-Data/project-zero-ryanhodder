@@ -47,19 +47,28 @@ public class UserOracle implements UserDao {
 		}
 		
 		try {
-			//Sql query here
-			String sql = "select * from testTable where test_uname = ? and test_pass = ?";
+			String sql = "select * from bankCustomers where user_name = ? and user_pass = ?";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
+			//callable statement is only for procedures
 			
 			System.out.println(rs.getFetchSize());
 			
 			//Maybe want to change User model so that user_id is an int
-			User u = new User(rs.getString("test_fname"), rs.getString("test_lname"), username, password, rs.getString("test_id"));
+			User user = new User();
 			
-			return Optional.of(u);
+			//using boolean to check if the result set is empty
+			boolean rsempty = true;
+			if(rs.next()) {
+				rsempty = false;
+				user = new User(rs.getString("first_name"), rs.getString("last_name"), username, password, rs.getString("USER_ID"));
+			}
+			if(rsempty) {
+				return Optional.empty();
+			}
+			return Optional.of(user);
 			
 		}catch(SQLException e) {
 			l.error(e.getMessage());
@@ -69,8 +78,39 @@ public class UserOracle implements UserDao {
 
 	@Override
 	public Optional<User> addUser(String firstName, String lastName, String username, String password) {
-		// TODO Auto-generated method stub
-		return null;
+				l.traceEntry();
+				
+				Connection c = ConnectionUtil.getConnection();
+				
+				if(c == null) {
+					l.traceExit(Optional.empty());
+					return Optional.empty();
+				}
+				
+				try {
+					String sql = ("insert into bankCustomers values(?,?,?,?,?)");
+					PreparedStatement ps = c.prepareStatement(sql);
+					ps.setInt(1, 2);
+					ps.setString(2, firstName);
+					ps.setString(3, lastName);
+					ps.setString(4, username);
+					ps.setString(5, password);
+					int result = ps.executeUpdate();
+					
+					
+					User user = new User();
+					//means 1 row was updated
+					if(result == 1) {
+						user = new User("", firstName, lastName, username, "");
+					}else {
+						return Optional.empty();
+					}
+					return Optional.of(user);
+					
+				}catch(SQLException e) {
+					l.error(e.getMessage());
+					return Optional.empty();
+				}
 	}
 		
 }

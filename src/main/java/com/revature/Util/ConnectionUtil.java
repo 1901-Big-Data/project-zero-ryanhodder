@@ -22,8 +22,8 @@ public class ConnectionUtil {
 	}
 	
 	public static Connection getConnection() {
-		if(ConnectionUtil.c != null) {
-			return ConnectionUtil.c;
+		if(c != null) {
+			return c;
 		}
 		
 		InputStream i = null;
@@ -35,14 +35,12 @@ public class ConnectionUtil {
 			
 			//
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = null;
 			
 			String end = p.getProperty("jdbc.url");
 			String username = p.getProperty("jdbc.username");
 			String password = p.getProperty("jdbc.password");
 			
-			con = DriverManager.getConnection(end, username, password);
-			c = con;
+			c = DriverManager.getConnection(end, username, password);
 			return c;
 			
 		}catch(FileNotFoundException e){
