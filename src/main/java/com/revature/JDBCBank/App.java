@@ -1,10 +1,14 @@
 package com.revature.JDBCBank;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+import com.revature.Models.Account;
 import com.revature.Models.User;
+import com.revature.Services.AccountService;
 import com.revature.Services.UserService;
 
 public class App {
@@ -13,6 +17,7 @@ public class App {
 	static String uLName;
 	static String uName;
 	static String uPass;
+	static int uID;
 	static boolean isLoggedIn = false;
 	static String mm = new String("\n[MAIN MENU]\nWould you like to\n\t1: Register\n\t2: Login\n\t3: Exit\n\t4: Help");
 	
@@ -47,6 +52,7 @@ public class App {
 					}
 				}	
 				if(uIn.equals("exit") || uIn.equals("3")) {
+					System.out.println("Goodbye!");
 					break;
 				}
 				if(uIn.equals("help") || uIn.equals("4")) {
@@ -98,6 +104,7 @@ public class App {
 			
 			try {
 				User user = UserService.getService().login(u, p).get();
+				uID = user.getUserId();
 				System.out.println("Hello, " + user.getfName());
 				return true;
 			}catch(NoSuchElementException e) {
@@ -105,9 +112,6 @@ public class App {
 				System.out.println(mm);
 				return false;
 			}
-			
-			//make sure it matches the corresponding username
-			//else "Username or password does not match"
 		}
 
 		
@@ -129,28 +133,113 @@ public class App {
 				//view transaction history
 			
 			String i = input.next();
+			double am = 0.0;
+			String ty = "";
+			boolean badInfo = false;
 			
 			if(i.equals("open") || i.equals("1")) {
 				System.out.println("What type of account would you like to open?\n\t1: Checking account\n\t2: Savings account");
 				i = input.next();
-				if(i.equals("checking")  || i.equals("1")) {
-					System.out.println("Ok, one moment while a new checking account is being generated for you...");
+				
+				//collecting some initial info for the account
+				do {
+					if(i.equals("checking")  || i.equals("1")) {
+						badInfo = false;
+						ty = "Checking";	
+					}else if(i.equals("savings") || i.equals("2")) {
+						badInfo = false;
+						ty = "Savings";
+					}else {
+						badInfo = true;
+						System.out.println("Please make sure you correctly specified which account you would like to open\n"
+								+ "type '1' or type 'checking' to open a checking account or type '2' or type 'savings' to open a savings account");
+					}
+				}while(badInfo);
+				
+				System.out.println("Ok excellent, and would you like to deposit an initial amount?\n"
+						+ "\t1: Yes (y)\n"
+						+ "\t2: No (n)\n");
+				i = input.next();
+				if(i.equals("yes") || i.equals("y") || i.equals("1")) {
+					System.out.println("Please enter the amount you would like to deposit.");
 					
-				}else if(i.equals("savings") || i.equals("2")) {
-					System.out.println("Ok, one moment while a new savings account is being generated for you...");
+					do {
+						i = input.next();
+						badInfo = false;
+						am = Double.valueOf(i);
+						if(am < 0) {
+							badInfo = true;
+							System.out.println("Please make sure enter a valid number, greater than zero");
+						}
+					}while(badInfo);
 				}else {
-					System.out.println("Please make sure you correctly specified which account you would like to open\n"
-							+ "type '1' or type 'checking' to open a checking account or type '2' or type 'savings' to open a savings account");
+					am = 0.0;
 				}
+				
+				//add new account to the table with the values from user
+				try {
+					Account a = AccountService.getService().openAccount(uID, ty, am).get();
+					
+					System.out.println("Ok, one moment while a new account is being generated for you...");
+					System.out.println("You can view your accounts in the 'View accounts' section");
+				}catch(NoSuchElementException e) {
+					System.out.println("Error with the database, please try again later");
+				}
+				
 			}else if(i.equals("view") || i.equals("2")) {
-				//get acc info here
-				System.out.println("View your accounts");
+				viewAccounts();
+
 			}else if(i.equals("deposit") || i.equals("3")) {
-				//deposit that shit
-				System.out.println("Deposit money into an account");
+				viewAccounts();
+				System.out.println("Please select the account number you would like to make a deposit into.");
+				i = input.next();
+				try {
+					int accNum = Integer.parseInt(i);
+					System.out.println("Ok, and please enter the amount you wish to deposit.");
+					do {
+						i = input.next();
+						badInfo = false;
+						am = Double.valueOf(i);
+						if(am < 0) {
+							badInfo = true;
+							System.out.println("Please make sure enter a valid number, greater than zero");
+						}
+					}while(badInfo);
+					Account dAcc = getAccIdAt(accNum);
+					dAcc = AccountService.getService().deposit(dAcc.getType(), am, dAcc.getAccId(), dAcc.getUserId()).get();
+					System.out.println("Your account has been updated!");
+					
+				}catch(NoSuchElementException e) {
+					System.out.println("Error accessing database. Please try again.");
+				}
+				
+			//make a withdraw
 			}else if(i.equals("withdraw") || i.equals("4")) {
-				//get that bread
-				System.out.println("Withdraw $$");
+				viewAccounts();
+				System.out.println("Please select the account you would like to make a withdrawl from");
+				
+				i = input.next();
+				try {
+					int accNum = Integer.parseInt(i);
+					System.out.println("Ok, and please enter the amount you wish to withdraw.");
+					do {
+						i = input.next();
+						badInfo = false;
+						am = Double.valueOf(i);
+						if(am < 0) {
+							badInfo = true;
+							System.out.println("Please make sure enter a valid number, greater than zero");
+						}
+					}while(badInfo);
+					Account dAcc = getAccIdAt(accNum);
+					dAcc = AccountService.getService().withdraw(dAcc.getType(), am, dAcc.getAccId(), dAcc.getUserId()).get();
+					System.out.println("Your account has been updated!");
+					
+				}catch(NoSuchElementException e) {
+					System.out.println("Error accessing database. Please try again.");
+				}
+
+				
 			}else if(i.equals("close") || i.equals("5")) {
 				//bye bye account
 				System.out.println("Close an account");
@@ -159,6 +248,40 @@ public class App {
 				System.out.println(mm);
 				isLoggedIn = false;
 			}
-					
+		}
+		
+		public static void viewAccounts() {
+			try {
+				int count = 1;
+				List<Account> listOfAccs = AccountService.getService().getAccounts(uID).get();
+				for(Account a: listOfAccs) {
+					System.out.println("| Account Number: " + count + " | Account Type: " + a.getType() + " | Balance: " + Double.toString(a.getAmount()));
+					count++;
+				}
+			}
+			catch(NoSuchElementException e) {
+				System.out.println("Error retrieving accounts");
+			}
+		}
+		
+		public static Account getAccIdAt(int pos) {
+			try {
+				int count = 1;
+				Account returnAcc = new Account();
+				List<Account> listOfAccs = AccountService.getService().getAccounts(uID).get();
+				for(Account a: listOfAccs) {
+					if(pos == count) {
+						returnAcc = a;
+						return returnAcc;
+					}
+					count++;
+				}
+				return returnAcc;
+			}
+			catch(NoSuchElementException e) {
+				System.out.println("Error retrieving account information");
+				return null;
+			}
+			
 		}
 }

@@ -12,16 +12,18 @@ public class Account implements Serializable{
 	private String type;
 	private double amount;
 	private Integer accId;
+	private Integer userId;
 	
 	public Account() {
 		super();
 	}
 
-	public Account(String type, double amount, Integer accId) {
+	public Account(String type, double amount, Integer accId, Integer userId) {
 		super();
 		this.type = type;
 		this.amount = amount;
 		this.accId = accId;
+		this.userId = userId;
 	}
 
 	public String getType() {
@@ -48,6 +50,14 @@ public class Account implements Serializable{
 		this.accId = accId;
 	}
 
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -61,6 +71,7 @@ public class Account implements Serializable{
 		temp = Double.doubleToLongBits(amount);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
+		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
 		return result;
 	}
 
@@ -85,12 +96,17 @@ public class Account implements Serializable{
 				return false;
 		} else if (!type.equals(other.type))
 			return false;
+		if (userId == null) {
+			if (other.userId != null)
+				return false;
+		} else if (!userId.equals(other.userId))
+			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Account [type=" + type + ", amount=" + amount + ", accId=" + accId + "]";
+		return "Account [type=" + type + ", amount=" + amount + ", accId=" + accId + ", userId=" + userId + "]";
 	}
 
 	

@@ -1,9 +1,11 @@
 package com.revature.Dao;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
@@ -17,11 +19,7 @@ public class UserOracle implements UserDao {
 	private static UserOracle u;
 	private static final Logger l = LogManager.getLogger(UserOracle.class);
 	
-	//singleton
-	private UserOracle() {
-		
-	}
-	
+	private UserOracle() {}
 	public static UserDao getDao() {
 		if(u == null) {
 			u = new UserOracle();
@@ -63,7 +61,7 @@ public class UserOracle implements UserDao {
 			boolean rsempty = true;
 			if(rs.next()) {
 				rsempty = false;
-				user = new User(rs.getString("first_name"), rs.getString("last_name"), username, password, rs.getString("USER_ID"));
+				user = new User(rs.getString("first_name"), rs.getString("last_name"), username, password, rs.getInt("USER_ID"));
 			}
 			if(rsempty) {
 				return Optional.empty();
@@ -88,23 +86,35 @@ public class UserOracle implements UserDao {
 				}
 				
 				try {
-					String sql = ("insert into bankCustomers values(?,?,?,?,?)");
-					PreparedStatement ps = c.prepareStatement(sql);
-					ps.setInt(1, 2);
-					ps.setString(2, firstName);
-					ps.setString(3, lastName);
-					ps.setString(4, username);
-					ps.setString(5, password);
-					int result = ps.executeUpdate();
+//					String sql = ("insert into bankCustomers values(?,?,?,?,?)");
+//					PreparedStatement ps = c.prepareStatement(sql);
+//					ps.setInt(1, 2);
+//					ps.setString(2, firstName);
+//					ps.setString(3, lastName);
+//					ps.setString(4, username);
+//					ps.setString(5, password);
+//					int result = ps.executeUpdate();
 					
+					String sql = "call addCustomer(?,?,?,?,?)";
+					CallableStatement cs = c.prepareCall(sql);
+					cs.setString(1, firstName);
+					cs.setString(2, lastName);
+					cs.setString(3, username);
+					cs.setString(4, password);
+					cs.registerOutParameter(5, Types.INTEGER);
+					cs.execute();
+					
+					int id = cs.getInt(5);
 					
 					User user = new User();
-					//means 1 row was updated
-					if(result == 1) {
-						user = new User("", firstName, lastName, username, "");
-					}else {
-						return Optional.empty();
-					}
+//					//means 1 row was updated
+//					if(result == 1) {
+//						user = new User(id, firstName, lastName, username, "");
+//					}else {
+//						return Optional.empty();
+//					}
+					
+					user = new User(firstName, lastName, username, "", id);
 					return Optional.of(user);
 					
 				}catch(SQLException e) {

@@ -14,7 +14,7 @@ public class User implements Serializable {
 	private String lName;
 	private String userName;
 	transient private String pass;
-	private String userId;
+	private int userId;
 //	private boolean isSuperUser;
 //	private List accounts;
 	
@@ -22,7 +22,7 @@ public class User implements Serializable {
 		super();
 	}
 	
-	public User(String fName, String lName, String userName, String pass, String userId) {
+	public User(String fName, String lName, String userName, String pass, int userId) {
 		super();
 		this.fName = fName;
 		this.lName = lName;
@@ -63,11 +63,11 @@ public class User implements Serializable {
 		this.pass = pass;
 	}
 
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
@@ -81,7 +81,7 @@ public class User implements Serializable {
 		int result = 1;
 		result = prime * result + ((fName == null) ? 0 : fName.hashCode());
 		result = prime * result + ((lName == null) ? 0 : lName.hashCode());
-		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
+		result = prime * result + userId;
 		result = prime * result + ((userName == null) ? 0 : userName.hashCode());
 		return result;
 	}
@@ -105,10 +105,7 @@ public class User implements Serializable {
 				return false;
 		} else if (!lName.equals(other.lName))
 			return false;
-		if (userId == null) {
-			if (other.userId != null)
-				return false;
-		} else if (!userId.equals(other.userId))
+		if (userId != other.userId)
 			return false;
 		if (userName == null) {
 			if (other.userName != null)
@@ -122,8 +119,4 @@ public class User implements Serializable {
 	public String toString() {
 		return "User [fName=" + fName + ", lName=" + lName + ", userName=" + userName + ", userId=" + userId + "]";
 	}
-
-	
-	
-	
 }

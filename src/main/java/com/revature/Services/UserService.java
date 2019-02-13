@@ -11,10 +11,7 @@ public class UserService {
 	private static UserService s;
 	private static UserDao dao = UserOracle.getDao();
 	
-	private UserService() {
-		
-	}
-	
+	private UserService() {}
 	public static UserService getService() {
 		if(s == null) {
 			s = new UserService();

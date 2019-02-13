@@ -281,3 +281,395 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 [TRACE] 2019-02-10 19:35:52.969 [main] UserOracle - Enter
 [TRACE] 2019-02-10 19:36:31.655 [main] UserOracle - Enter
 [TRACE] 2019-02-10 19:37:19.605 [main] UserOracle - Enter
+[TRACE] 2019-02-11 13:11:44.134 [main] UserOracle - Enter
+[TRACE] 2019-02-11 13:15:07.391 [main] UserOracle - Enter
+[ERROR] 2019-02-11 13:15:08.857 [main] UserOracle - ORA-00001: unique constraint (ROOT.SYS_C005193) violated
+
+[TRACE] 2019-02-11 19:53:27.155 [main] UserOracle - Enter
+[ERROR] 2019-02-11 19:53:28.672 [main] UserOracle - ORA-01400: cannot insert NULL into ("ROOT"."BANKCUSTOMERS"."USER_ID")
+ORA-06512: at "ROOT.ADDCUSTOMER", line 4
+
+[TRACE] 2019-02-11 19:54:57.474 [main] UserOracle - Enter
+[TRACE] 2019-02-11 19:55:10.325 [main] UserOracle - Enter
+[TRACE] 2019-02-11 20:35:25.831 [main] UserOracle - Enter
+[TRACE] 2019-02-11 20:35:37.447 [main] UserOracle - Enter
+[TRACE] 2019-02-11 20:47:40.159 [main] UserOracle - Enter
+[TRACE] 2019-02-11 20:48:01.420 [main] UserOracle - Enter
+[TRACE] 2019-02-12 08:41:56.320 [main] UserOracle - Enter
+[ERROR] 2019-02-12 08:41:57.475 [main] UserOracle - ORA-00001: unique constraint (ROOT.SYS_C005235) violated
+ORA-06512: at "ROOT.ADDCUSTOMER", line 4
+
+[TRACE] 2019-02-12 08:42:52.648 [main] UserOracle - Enter
+[TRACE] 2019-02-12 08:44:37.383 [main] UserOracle - Enter
+[TRACE] 2019-02-12 08:44:48.643 [main] UserOracle - Enter
+[TRACE] 2019-02-12 10:00:22.879 [main] UserOracle - Enter
+[TRACE] 2019-02-12 10:00:28.031 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 10:02:41.340 [main] UserOracle - Enter
+[TRACE] 2019-02-12 10:02:45.937 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 10:03:53.568 [main] UserOracle - Enter
+[TRACE] 2019-02-12 10:03:57.824 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 10:11:41.370 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 10:11:42.215 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 10:11:42.638 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 10:13:58.061 [main] UserOracle - Enter
+[TRACE] 2019-02-12 10:14:02.084 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 10:30:20.502 [main] UserOracle - Enter
+[TRACE] 2019-02-12 10:30:25.593 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 10:32:09.124 [main] UserOracle - Enter
+[TRACE] 2019-02-12 10:32:15.283 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 10:39:49.656 [main] UserOracle - Enter
+[TRACE] 2019-02-12 10:39:53.644 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 11:17:24.127 [main] UserOracle - Enter
+[TRACE] 2019-02-12 11:17:29.234 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 11:21:17.380 [main] UserOracle - Enter
+[TRACE] 2019-02-12 11:21:21.688 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 11:24:02.947 [main] UserOracle - Enter
+[TRACE] 2019-02-12 11:24:07.089 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 11:24:07.130 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 11:27:15.404 [main] UserOracle - Enter
+[TRACE] 2019-02-12 11:27:20.818 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 11:27:20.855 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 11:32:20.922 [main] UserOracle - Enter
+[TRACE] 2019-02-12 11:32:24.050 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 11:32:24.079 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 12:21:01.010 [main] UserOracle - Enter
+[TRACE] 2019-02-12 12:21:06.566 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 12:21:06.598 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 12:22:47.370 [main] UserOracle - Enter
+[TRACE] 2019-02-12 12:22:51.075 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 12:22:51.095 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 12:34:46.437 [main] UserOracle - Enter
+[TRACE] 2019-02-12 12:34:49.883 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 12:34:49.917 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 13:00:06.935 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:00:10.678 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:00:10.702 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 13:13:32.266 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:13:36.822 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:13:36.842 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:13:36.844 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:108) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:25) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:173) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:16:55.585 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:16:59.086 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:16:59.107 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:16:59.109 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:109) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:25) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:173) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:21:33.102 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:21:38.199 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:21:38.220 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:21:38.222 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:109) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:25) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:173) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:21:50.975 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:21:50.996 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:21:50.997 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:109) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:25) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:173) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:22:28.567 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:22:33.015 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:22:33.039 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:22:33.041 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:109) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:25) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:173) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:28:18.283 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:28:22.670 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:28:22.693 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:28:22.695 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:109) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:29) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:174) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:30:01.807 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:30:03.243 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:30:03.270 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:30:03.273 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:109) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:29) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:174) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:33:50.746 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:33:55.558 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:33:55.585 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:33:55.586 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:109) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:29) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:174) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:37:31.017 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:37:38.579 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:37:40.572 [main] AccountOracle - Enter
+[ERROR] 2019-02-12 13:37:40.593 [main] AccountOracle - Catching
+java.sql.SQLException: Invalid operation for forward only resultset : beforeFirst
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.beforeFirst(InsensitiveScrollableResultSet.java:686) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:94) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:29) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:174) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:38:30.292 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:38:36.371 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:38:37.934 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:38:37.962 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:38:37.964 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:112) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:29) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:174) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:54:20.101 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:54:23.248 [main] AccountOracle - Enter
+[ERROR] 2019-02-12 13:54:23.250 [main] AccountOracle - Catching
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setIntInternal(OraclePreparedStatement.java:5223) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.setInt(OraclePreparedStatement.java:5210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setInt(OraclePreparedStatementWrapper.java:209) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:91) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:29) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:174) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 13:55:24.465 [main] UserOracle - Enter
+[TRACE] 2019-02-12 13:55:26.981 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 13:55:27.005 [main] AccountOracle - Have completed the query
+[ERROR] 2019-02-12 13:55:27.007 [main] AccountOracle - Catching
+java.sql.SQLException: Result set after last row
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getString(GeneratedScrollableResultSet.java:879) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.getAccounts(AccountOracle.java:110) [classes/:?]
+	at com.revature.Services.AccountService.getAccounts(AccountService.java:29) [classes/:?]
+	at com.revature.JDBCBank.App.viewAccounts(App.java:174) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:152) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 16:04:46.679 [main] UserOracle - Enter
+[TRACE] 2019-02-12 16:04:50.837 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 16:04:50.865 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 16:10:03.103 [main] UserOracle - Enter
+[TRACE] 2019-02-12 16:10:07.012 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 16:10:07.032 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 16:12:59.941 [main] UserOracle - Enter
+[TRACE] 2019-02-12 16:13:03.738 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 16:13:03.765 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 16:18:47.579 [main] UserOracle - Enter
+[TRACE] 2019-02-12 16:18:50.960 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 16:18:50.982 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 16:18:50.983 [main] AccountOracle - Entered while loop0
+[TRACE] 2019-02-12 16:18:50.984 [main] AccountOracle - Added account to list: 0
+[TRACE] 2019-02-12 16:18:50.984 [main] AccountOracle - Entered while loop1
+[TRACE] 2019-02-12 16:18:50.984 [main] AccountOracle - Added account to list: 1
+[TRACE] 2019-02-12 16:18:50.984 [main] AccountOracle - Entered while loop2
+[TRACE] 2019-02-12 16:18:50.985 [main] AccountOracle - Added account to list: 2
+[TRACE] 2019-02-12 16:20:22.633 [main] UserOracle - Enter
+[TRACE] 2019-02-12 16:20:26.696 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 16:20:26.722 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 16:20:26.722 [main] AccountOracle - Entered while loop0
+[TRACE] 2019-02-12 16:20:26.724 [main] AccountOracle - Added account to list: 0
+[TRACE] 2019-02-12 16:20:26.724 [main] AccountOracle - Entered while loop1
+[TRACE] 2019-02-12 16:20:26.724 [main] AccountOracle - Added account to list: 1
+[TRACE] 2019-02-12 16:24:26.593 [main] UserOracle - Enter
+[TRACE] 2019-02-12 16:24:29.134 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 16:24:29.161 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 16:24:29.161 [main] AccountOracle - Entered while loop0
+[TRACE] 2019-02-12 16:24:29.163 [main] AccountOracle - Added account to list: 0
+[TRACE] 2019-02-12 16:24:29.163 [main] AccountOracle - Entered while loop1
+[TRACE] 2019-02-12 16:24:29.163 [main] AccountOracle - Added account to list: 1
+[TRACE] 2019-02-12 16:27:49.536 [main] UserOracle - Enter
+[TRACE] 2019-02-12 16:27:52.642 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 16:27:52.669 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 16:27:52.670 [main] AccountOracle - Entered while loop0
+[TRACE] 2019-02-12 16:27:52.672 [main] AccountOracle - Added account to list: 0
+[TRACE] 2019-02-12 16:27:52.673 [main] AccountOracle - Entered while loop1
+[TRACE] 2019-02-12 16:27:52.673 [main] AccountOracle - Added account to list: 1
+[TRACE] 2019-02-12 18:17:23.584 [main] UserOracle - Enter
+[TRACE] 2019-02-12 18:17:27.947 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 18:17:28.001 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 18:17:28.003 [main] AccountOracle - Entered while loop0
+[TRACE] 2019-02-12 18:17:28.006 [main] AccountOracle - Added account to list: 0
+[TRACE] 2019-02-12 18:17:28.006 [main] AccountOracle - Entered while loop1
+[TRACE] 2019-02-12 18:17:28.008 [main] AccountOracle - Added account to list: 1
+[TRACE] 2019-02-12 19:33:10.457 [main] UserOracle - Enter
+[TRACE] 2019-02-12 19:33:18.762 [main] UserOracle - Enter
+[TRACE] 2019-02-12 19:33:22.361 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 19:33:22.552 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 19:37:00.486 [main] UserOracle - Enter
+[TRACE] 2019-02-12 19:41:07.367 [main] UserOracle - Enter
+[TRACE] 2019-02-12 19:42:49.264 [main] UserOracle - Enter
+[TRACE] 2019-02-12 19:43:01.242 [main] UserOracle - Enter
+[TRACE] 2019-02-12 19:43:05.244 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 19:43:05.280 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 19:56:24.403 [main] UserOracle - Enter
+[TRACE] 2019-02-12 19:56:32.769 [main] AccountOracle - Enter
+[ERROR] 2019-02-12 19:56:32.915 [main] AccountOracle - Catching
+java.sql.SQLSyntaxErrorException: ORA-04098: trigger 'ROOT.ADDBANKIDTRIG' is invalid and failed re-validation
+ORA-06512: at "ROOT.ADDACCOUNT", line 4
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:53) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:938) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.openAcc(AccountOracle.java:84) [classes/:?]
+	at com.revature.Services.AccountService.openAccount(AccountService.java:41) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:181) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 20:04:15.934 [main] UserOracle - Enter
+[TRACE] 2019-02-12 20:04:23.683 [main] AccountOracle - Enter
+[ERROR] 2019-02-12 20:04:23.796 [main] AccountOracle - Catching
+java.sql.SQLSyntaxErrorException: ORA-04098: trigger 'ROOT.ADDBANKIDTRIG' is invalid and failed re-validation
+ORA-06512: at "ROOT.ADDACCOUNT", line 4
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:210) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:53) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:938) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3923) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:5617) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1385) ~[ojdbc7-12.1.0.jar:12.1.0.1.0]
+	at com.revature.Dao.AccountOracle.openAcc(AccountOracle.java:84) [classes/:?]
+	at com.revature.Services.AccountService.openAccount(AccountService.java:41) [classes/:?]
+	at com.revature.JDBCBank.App.loggedIn(App.java:181) [classes/:?]
+	at com.revature.JDBCBank.App.main(App.java:51) [classes/:?]
+[TRACE] 2019-02-12 20:48:32.657 [main] UserOracle - Enter
+[TRACE] 2019-02-12 20:48:40.346 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 20:48:48.250 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 20:48:48.285 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 20:48:48.286 [main] AccountOracle - Entered while loop0
+[TRACE] 2019-02-12 20:48:48.286 [main] AccountOracle - Added account to list: 0
+[TRACE] 2019-02-12 20:49:21.167 [main] UserOracle - Enter
+[TRACE] 2019-02-12 20:49:25.529 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 20:49:25.570 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 20:49:25.571 [main] AccountOracle - Entered while loop0
+[TRACE] 2019-02-12 20:49:25.571 [main] AccountOracle - Added account to list: 0
+[TRACE] 2019-02-12 20:49:43.599 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 20:50:41.750 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 20:50:44.377 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 20:50:44.408 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 20:50:44.408 [main] AccountOracle - Entered while loop0
+[TRACE] 2019-02-12 20:50:44.408 [main] AccountOracle - Added account to list: 0
+[TRACE] 2019-02-12 20:50:44.409 [main] AccountOracle - Entered while loop1
+[TRACE] 2019-02-12 20:50:44.409 [main] AccountOracle - Added account to list: 1
+[TRACE] 2019-02-12 20:50:44.409 [main] AccountOracle - Entered while loop2
+[TRACE] 2019-02-12 20:50:44.409 [main] AccountOracle - Added account to list: 2
+[TRACE] 2019-02-12 20:59:40.431 [main] UserOracle - Enter
+[TRACE] 2019-02-12 21:00:37.156 [main] UserOracle - Enter
+[TRACE] 2019-02-12 21:00:41.095 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 21:00:41.119 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 21:01:28.380 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 21:01:30.721 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 21:01:30.756 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 22:32:03.923 [main] UserOracle - Enter
+[TRACE] 2019-02-12 22:32:09.495 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:32:09.732 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 22:32:19.290 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:32:19.340 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 22:32:32.317 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:32:32.349 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 22:32:32.350 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:32:51.999 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:32:52.030 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 22:35:12.056 [main] UserOracle - Enter
+[TRACE] 2019-02-12 22:35:16.441 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:35:16.468 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 22:35:21.175 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:35:21.202 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 22:35:28.077 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:35:28.100 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 22:35:28.100 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:35:32.108 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 22:35:32.134 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:17:07.353 [main] UserOracle - Enter
+[TRACE] 2019-02-12 23:17:18.290 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:17:34.688 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:17:34.857 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:17:40.742 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:17:40.770 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:17:50.256 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:17:50.285 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:17:50.286 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:22:52.683 [main] UserOracle - Enter
+[TRACE] 2019-02-12 23:22:58.227 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:22:58.257 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:23:02.248 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:23:02.371 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:23:31.005 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:23:31.029 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:23:51.303 [main] UserOracle - Enter
+[TRACE] 2019-02-12 23:23:54.633 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:23:54.666 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:24:06.848 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:24:06.874 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:24:06.875 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:24:14.975 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:24:15.001 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:24:20.781 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:24:20.803 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:24:24.482 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:24:24.512 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:24:24.513 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:24:57.245 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:24:57.278 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:25:05.004 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:25:05.033 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:25:05.034 [main] AccountOracle - Enter
