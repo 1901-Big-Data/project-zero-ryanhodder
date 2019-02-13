@@ -1,4 +1,10 @@
 DROP TABLE bankCustomers;
+DROP TABLE bankAccounts;
+DROP SEQUENCE BANK_ACCOUNT_ID_SEQ;
+DROP SEQUENCE USER_ID_SEQ;
+
+--SELECT * from bankAccounts;
+--SELECT * from bankCustomers;
 
 CREATE TABLE bankCustomers(
     USER_ID number(10) primary key,
@@ -32,12 +38,6 @@ BEGIN
     commit;
 END;
 /
-
-SELECT * from bankCustomers;
-
---create an index using the primary key so that the table is sorted
-DROP TABLE bankAccounts;
-DROP SEQUENCE BANK_ACCOUNT_ID_SEQ;
 
 CREATE TABLE bankAccounts(
     BANK_ACCOUNT_ID number(10) primary key,
@@ -75,7 +75,6 @@ INSERT INTO bankAccounts VALUES(0, 'checking', 5.55, 1);
 INSERT INTO bankAccounts VALUES(2, 'savings', 100.11, 1);
 INSERT INTO bankAccounts VALUES(1, 'savings', 10.00, 2);
 
-SELECT * from bankAccounts;
 
 CREATE OR REPLACE PROCEDURE deposit (BANK_ACCOUNT_ID_IN IN number, amount IN number, newbalance OUT number)
 IS
@@ -104,12 +103,3 @@ BEGIN
     commit;
 END;
 /
-
-Select * from bankAccounts;
-
---SELECT bankAccounts.balance 
---    FROM bankaccounts
---    JOIN bankCustomers ON bankcustomers.user_id = bankaccounts.user_id
---    GROUP BY bankaccounts.user_id
---    HAVING bankaccounts.uesr_id = 1;
-
