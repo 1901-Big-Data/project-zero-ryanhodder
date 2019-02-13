@@ -23,15 +23,6 @@ public class App {
 	
 	public static void main(String[] args) {
 		
-		
-		//trigger in sql will create the USER_ID and ACCOUNT_ID
-		
-		//UserService.getService().addUser(username, password).get();
-		//-->get because Optional
-		//--> have to put in trycatch because it is an optional
-		//have to check for NoSuchElementException because it is an optional
-		//we dont rn but could do throws exception incase we want to check password is correct format or something
-		
 		intro();
 		
 		try {

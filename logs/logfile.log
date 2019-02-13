@@ -705,3 +705,10 @@ ORA-06512: at "ROOT.ADDACCOUNT", line 4
 [TRACE] 2019-02-13 00:32:30.536 [main] UserOracle - Enter
 [TRACE] 2019-02-13 00:32:36.109 [main] AccountOracle - Enter
 [TRACE] 2019-02-13 00:32:36.138 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-13 01:25:36.077 [main] UserOracle - Enter
+[TRACE] 2019-02-13 01:45:40.951 [main] UserOracle - Enter
+[TRACE] 2019-02-13 01:46:03.036 [main] UserOracle - Enter
+[TRACE] 2019-02-13 01:49:08.799 [main] UserOracle - Enter
+[ERROR] 2019-02-13 01:49:09.314 [main] UserOracle - ORA-00001: unique constraint (ROOT.SYS_C005235) violated
+ORA-06512: at "ROOT.ADDCUSTOMER", line 4
+

@@ -1,5 +1,13 @@
 package com.revature.JDBCBank;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.NoSuchElementException;
+
+import com.revature.Models.User;
+import com.revature.Services.UserService;
+import com.revature.Util.ConnectionUtil;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -10,6 +18,9 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
+	
+	public static UserService us = UserService.getService();
+	
     /**
      * Create the test case
      *
@@ -35,4 +46,46 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
+    
+    public void testAddUser() {
+    	ConnectionUtil.getConnection();
+    	
+    	try {
+			ConnectionUtil.getConnection().setAutoCommit(false);
+			
+			assertSame(us.addUser("test", "test", "test", "test").get().getClass(), User.class);
+			
+		} catch (SQLException e) {
+			fail(e.toString());
+		} catch (NoSuchElementException e) {
+			fail(e.toString());
+		} finally {
+			try {
+				ConnectionUtil.getConnection().rollback();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+    }
+    
+	public void testUserOracleLoginWrongPassword() {
+		ConnectionUtil.getConnection();	
+		try {
+			ConnectionUtil.getConnection().setAutoCommit(false);
+				
+			UserService.getService().login("test", "hello").get();
+		} catch (SQLException e) {
+			fail(e.toString());
+		} catch (NoSuchElementException e) {
+			//Expecting NoSuchElementException
+		}
+		finally {
+			try {
+				ConnectionUtil.getConnection().rollback();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }
