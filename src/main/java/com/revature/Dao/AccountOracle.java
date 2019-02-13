@@ -42,14 +42,6 @@ public class AccountOracle implements AccountDao{
 		}
 		
 		try {
-			//sql statement
-			//will need to += curr amount in the account
-			
-			//put statement into appropriate variables
-			//put into account variable 
-			//return an optional of that
-			//or return empty optional
-			
 			String sql = "call deposit(?,?,?)";
 			CallableStatement cs = c.prepareCall(sql);
 			cs.setInt(1, accID);
@@ -144,10 +136,36 @@ public class AccountOracle implements AccountDao{
 			return Optional.empty();
 		}
 	}
+	
+	//Returns true if delete was successful
 	@Override
-	public Optional<Account> closeAcc(int AccID) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean closeAcc(int AccID, double amount) {
+		l.traceEntry();
+		
+		Connection c = ConnectionUtil.getConnection();
+		
+		if(c == null) {
+			l.traceExit(false);
+			return false;
+		}
+		
+		if(amount != 0.0) {
+			return false;
+		}else {
+			try {
+				String sql = "DELETE FROM bankAccounts WHERE BANK_ACCOUNT_ID = ?";
+				PreparedStatement ps = c.prepareStatement(sql);
+				ps.setInt(1, AccID);
+				ResultSet rs = ps.executeQuery();
+				
+				return true;
+				
+			}catch(SQLException e) {
+				l.catching(e);
+				return false;
+			}
+			
+		}
 	}
 	
 	@Override
@@ -172,7 +190,6 @@ public class AccountOracle implements AccountDao{
 			List<Account> accList = new ArrayList<Account>();
 			
 			l.trace("Have completed the query");
-			int i = 0;
 			
 			boolean rsEmpty = true;
 			while(accResults.next()) {

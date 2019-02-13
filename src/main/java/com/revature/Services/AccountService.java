@@ -21,10 +21,6 @@ public class AccountService {
 		return a;
 	}
 	
-//	public Optional<List<Account>> getAccounts(int userID){
-//		return dao.getAccounts(userID);
-//	}
-	
 	public Optional<List<Account>> getAccounts(int userID){
 		return dao.getAccounts(userID);
 	}
@@ -41,7 +37,7 @@ public class AccountService {
 		return  dao.openAcc(userID, accType, amount);
 	}
 	
-	public Optional<Account> closeAccount(int AccID){
-		return  Optional.empty();
+	public boolean closeAccount(int AccID, double amount){
+		return  dao.closeAcc(AccID, amount);
 	}
 }

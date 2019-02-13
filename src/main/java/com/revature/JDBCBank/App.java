@@ -216,7 +216,7 @@ public class App {
 			//make a withdraw
 			}else if(i.equals("withdraw") || i.equals("4")) {
 				viewAccounts();
-				System.out.println("Please select the account you would like to make a withdrawl from");
+				System.out.println("Please select the account number you would like to make a withdrawl from");
 				
 				i = input.next();
 				try {
@@ -238,11 +238,25 @@ public class App {
 				}catch(NoSuchElementException e) {
 					System.out.println("Error accessing database. Please try again.");
 				}
-
-				
+			//close an account
 			}else if(i.equals("close") || i.equals("5")) {
-				//bye bye account
-				System.out.println("Close an account");
+				viewAccounts();
+				System.out.println("Please select the account you would like to close");
+				i = input.next();
+				
+				try {
+					int accNum = Integer.parseInt(i);
+					Account dAcc = getAccIdAt(accNum);
+					boolean b = AccountService.getService().closeAccount(dAcc.getAccId(), dAcc.getAmount());
+					if(b) {
+						System.out.println("You have successfully closed the account");
+					}
+					else {throw new SQLException(); }
+					
+				}catch(SQLException e) {
+					System.out.println("Please make sure the account you are trying to close does not have any money in it.");
+				}
+				
 			}else if(i.equals("logout") || i.equals("6")) {
 				System.out.println("Logging out...\n");
 				System.out.println(mm);
@@ -260,7 +274,7 @@ public class App {
 				}
 			}
 			catch(NoSuchElementException e) {
-				System.out.println("Error retrieving accounts");
+				System.out.println("You do not have any open accounts.");
 			}
 		}
 		
@@ -279,7 +293,7 @@ public class App {
 				return returnAcc;
 			}
 			catch(NoSuchElementException e) {
-				System.out.println("Error retrieving account information");
+				System.out.println("Error retreiving account information");
 				return null;
 			}
 			

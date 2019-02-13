@@ -52,8 +52,6 @@ public class UserOracle implements UserDao {
 			ResultSet rs = ps.executeQuery();
 			//callable statement is only for procedures
 			
-			System.out.println(rs.getFetchSize());
-			
 			//Maybe want to change User model so that user_id is an int
 			User user = new User();
 			

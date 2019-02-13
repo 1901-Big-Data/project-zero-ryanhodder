@@ -11,5 +11,5 @@ public interface AccountDao {
 	Optional<Account> deposit(String accType, double amount, int accID, int userID);
 	Optional<Account> withdraw(String accType, double amount, int accID, int userID);
 	Optional<Account> openAcc(int userID, String accType, double amount);
-	Optional<Account> closeAcc(int AccID);
+	boolean closeAcc(int AccID, double amount);
 }

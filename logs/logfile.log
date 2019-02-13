@@ -673,3 +673,35 @@ ORA-06512: at "ROOT.ADDACCOUNT", line 4
 [TRACE] 2019-02-12 23:25:05.004 [main] AccountOracle - Enter
 [TRACE] 2019-02-12 23:25:05.033 [main] AccountOracle - Have completed the query
 [TRACE] 2019-02-12 23:25:05.034 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:30:01.981 [main] UserOracle - Enter
+[TRACE] 2019-02-12 23:30:09.965 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:30:10.002 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:30:16.027 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:30:16.057 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:30:16.058 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:31:55.999 [main] UserOracle - Enter
+[TRACE] 2019-02-12 23:32:05.644 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:32:05.670 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:33:49.258 [main] UserOracle - Enter
+[TRACE] 2019-02-12 23:34:02.776 [main] UserOracle - Enter
+[TRACE] 2019-02-12 23:34:13.626 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:34:13.661 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:34:54.244 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:34:58.728 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:34:58.757 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-12 23:35:08.212 [main] AccountOracle - Enter
+[TRACE] 2019-02-12 23:35:08.319 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-13 00:30:39.333 [main] UserOracle - Enter
+[TRACE] 2019-02-13 00:31:11.331 [main] AccountOracle - Enter
+[TRACE] 2019-02-13 00:31:11.369 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-13 00:31:24.321 [main] AccountOracle - Enter
+[TRACE] 2019-02-13 00:31:24.347 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-13 00:31:30.712 [main] AccountOracle - Enter
+[TRACE] 2019-02-13 00:31:30.738 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-13 00:31:30.738 [main] AccountOracle - Enter
+[TRACE] 2019-02-13 00:31:35.187 [main] AccountOracle - Enter
+[TRACE] 2019-02-13 00:31:35.234 [main] AccountOracle - Have completed the query
+[TRACE] 2019-02-13 00:32:18.842 [main] UserOracle - Enter
+[TRACE] 2019-02-13 00:32:30.536 [main] UserOracle - Enter
+[TRACE] 2019-02-13 00:32:36.109 [main] AccountOracle - Enter
+[TRACE] 2019-02-13 00:32:36.138 [main] AccountOracle - Have completed the query
